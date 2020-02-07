@@ -1,28 +1,49 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+		<myheader></myheader>
+		<ul>
+			<li v-for="item in items" :key="item.message">
+				{{ item.message }}
+			</li>
+		</ul>
+		<button @click="push()">push</button>
+
+		<p v-if="msg.length > 0">{{ msg }}</p>
+		<p v-else>no text</p>
+		<input type="text" v-model="msg">
+		<button @click="clear()">clear</button>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import myheader from './components/myheader'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+	components: {
+		myheader
+	},
+	data() {
+		return {
+			items: [
+				{ message: 'Foo' },
+				{ message: 'Bar' }
+			],
+			msg: 'Hello, World!'
+		}
+	},
+	methods: {
+		clear() {
+			this.msg = ''
+		},
+		push(){
+			this.items.push({ message: 'New' })
+		}
+	}
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+li {
+	font-size: 24px;
 }
 </style>
