@@ -1,14 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import App from './App.vue'
-import HelloWorld from './components/header.vue'
+import Content from './components/content.vue'
 
 Vue.use(Router)
 
 const routes = [
-	{ path: '/', component: App },
-	{ path: '/hello', component: HelloWorld }
+	{ path: '/content1', component: Content },
+	{ path: '/content2', component: Content }
 ]
 
 const router = new Router({

@@ -13,8 +13,8 @@
 		<input type="text" v-model="msg">
 		<button @click="clear()">clear</button>
 
-		<router-link to="/hello">hello</router-link>
-		<router-link to="/">App</router-link>
+		<router-link to="/content1">Content1</router-link>
+		<router-link to="/content2">Content2</router-link>
 		<router-view></router-view>
   </div>
 </template>
