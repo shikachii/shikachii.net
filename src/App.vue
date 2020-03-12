@@ -82,12 +82,12 @@ li {
 a {
 	color: #333;
 	text-decoration: none;
-	transition: color 500ms;
+	transition: color 200ms;
 }
 
 a:hover {
 	color: #888;
-	transition: color 500ms;
+	transition: color 200ms;
 }
 
 .description {
