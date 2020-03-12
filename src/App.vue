@@ -1,8 +1,9 @@
 <template>
   <div id="app">
 		<myheader></myheader>
+		<!--
 		<ul>
-			<li v-for="item in items" :key="item">
+			<li v-for="(item, index) in items" :key="index">
 				{{ item.message }}
 			</li>
 		</ul>
@@ -12,44 +13,48 @@
 		<p v-else>no text</p>
 		<input type="text" v-model="msg">
 		<button @click="clear()">clear</button>
+		-->
 
-		<router-link to="/content1">Content1</router-link>
-		<router-link to="/content2">Content2</router-link>
-		<router-view></router-view>
+		<Info class="view" />
+		<Links class="view" />
+
+		<router-view :message="msg" class="view"></router-view>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import myheader from './components/header'
+import myheader from './components/header.vue'
+import Info from './components/Info.vue'
+import Links from './components/Links.vue'
 
 @Component({
   components: {
     myheader,
+		Info,
+		Links,
   },
-	data() {
-		return {
-			items: [
-				{ message: 'Foo' },
-				{ message: 'Bar' }
-			],
-			msg: 'Hello, World!'
-		}
-	},
-	methods: {
-		clear() {
-			this.msg = ''
-		},
-		push(){
-			this.items.push({ message: 'New' })
-		}
-	}
 })
-export default class App extends Vue { }
+export default class App extends Vue {
+	items: object[] = [
+		{ message: 'Foo' },
+		{ message: 'Bar' },
+	]
+	public msg: string = 'Hello, World!'
+	
+	clear() {
+		this.msg = ''
+	}
+
+	push(){
+		this.items.push({ message: 'New' })
+	}
+}
 </script>
 
 <style>
 body {
+	background: #eee;
 	margin: initial;
 }
 li {
@@ -59,4 +64,26 @@ li {
 	width: 80%;
 	margin: 0 auto;
 }
+
+.content {
+	margin-top: 40px;
+	width: 400px;
+	text-align: center;
+}
+
+.title {
+	font-size: 36px;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+	transition: color 500ms;
+}
+
+a:hover {
+	color: #888;
+	transition: color 500ms;
+}
+
 </style>

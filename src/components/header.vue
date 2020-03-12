@@ -1,15 +1,15 @@
 <template>
 	<div id="header">
 		<div class="view">
-			<div id="title" class="info">shikachii.net</div>
-<!--
+			<div id="title" class="info">
+				<router-link to="/">shikachii.net</router-link>
+			</div>
 			<div class="nav info">
 				<ul>
-					<li><a>Info</a></li>
-					<li><a>Links</a></li>
+					<li><router-link to="/info">Info</router-link></li>
+					<li><router-link to="/links">Links</router-link></li>
 				</ul>
 			</div>
--->
 		</div>
 	</div>
 </template>
@@ -39,5 +39,9 @@ li {
 ul {
 	margin: initial;
 	padding: initial;
+}
+a {
+	color: #eee;
+	text-decoration: none;
 }
 </style>
