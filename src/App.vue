@@ -1,60 +1,29 @@
 <template>
   <div id="app">
-		<myheader></myheader>
-		<ul>
-			<li v-for="item in items" :key="item">
-				{{ item.message }}
-			</li>
-		</ul>
-		<button @click="push()">push</button>
-
-		<p v-if="msg.length > 0">{{ msg }}</p>
-		<p v-else>no text</p>
-		<input type="text" v-model="msg">
-		<button @click="clear()">clear</button>
-
-		<router-link to="/content1">Content1</router-link>
-		<router-link to="/content2">Content2</router-link>
-		<router-view></router-view>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
   </div>
 </template>
 
-<script>
-import myheader from './components/header'
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import HelloWorld from './components/HelloWorld.vue';
 
-export default {
-	components: {
-		myheader
-	},
-	data() {
-		return {
-			items: [
-				{ message: 'Foo' },
-				{ message: 'Bar' }
-			],
-			msg: 'Hello, World!'
-		}
-	},
-	methods: {
-		clear() {
-			this.msg = ''
-		},
-		push(){
-			this.items.push({ message: 'New' })
-		}
-	}
-}
+@Component({
+  components: {
+    HelloWorld,
+  },
+})
+export default class App extends Vue {}
 </script>
 
 <style>
-body {
-	margin: initial;
-}
-li {
-	font-size: 24px;
-}
-.view {
-	width: 80%;
-	margin: 0 auto;
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
