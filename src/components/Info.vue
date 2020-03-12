@@ -23,7 +23,7 @@ export default class Info extends Vue { }
 }
 
 .icon {
-	margin: 20px;
+	margin-top: 20px;
 	font-size: 100px;
 }
 </style>

@@ -17,6 +17,7 @@
 
 		<Info class="view" />
 		<Links class="view" />
+		<Contact class="view" />
 
 		<router-view :message="msg" class="view"></router-view>
   </div>
@@ -27,12 +28,14 @@ import { Component, Vue } from 'vue-property-decorator';
 import myheader from './components/header.vue'
 import Info from './components/Info.vue'
 import Links from './components/Links.vue'
+import Contact from './components/Contact.vue'
 
 @Component({
   components: {
     myheader,
 		Info,
 		Links,
+		Contact,
   },
 })
 export default class App extends Vue {
@@ -55,6 +58,7 @@ export default class App extends Vue {
 <style>
 body {
 	background: #eee;
+	color: #333;
 	margin: initial;
 }
 li {
@@ -84,6 +88,11 @@ a {
 a:hover {
 	color: #888;
 	transition: color 500ms;
+}
+
+.description {
+	font-size: 18px;
+	margin-top: 20px;
 }
 
 </style>
