@@ -21,7 +21,6 @@ export default class Links extends Vue { }
 
 <style scoped>
 ul {
-	margin-top: 20px;
 	padding: initial;
 	list-style-type: none;
 }
