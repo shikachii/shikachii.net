@@ -82,6 +82,28 @@ li {
 	font-size: 36px;
 }
 
+.title::before {
+	content: "";
+	display: inline-block;
+	background: #333;
+	width: 50px;
+	height: 2px;
+	margin-right: 8px;
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
+.title::after {
+	content: "";
+	display: inline-block;
+	background: #333;
+	width: 50px;
+	height: 2px;
+	margin-left: 8px;
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
 a {
 	color: #333;
 	text-decoration: none;

@@ -1,6 +1,6 @@
 <template>
 	<div id="links" class="content">
-		<div class="title">- Links -</div>
+		<div class="title">Links</div>
 		<div class="description">
 			<ul>
 				<li><a href="https://twitter.com/shikachii">Twitter(@shikachii)</a></li>

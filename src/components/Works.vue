@@ -1,6 +1,6 @@
 <template>
 	<div id="works" class="content">
-		<div class="title">- Works -</div>
+		<div class="title">Works</div>
 		<div class="description">
 			<ul>
 				<li>
