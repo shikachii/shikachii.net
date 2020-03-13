@@ -17,8 +17,8 @@
 
 		<Info class="view" />
 		<Links class="view" />
-		<Contact class="view" />
 		<Works class="view" />
+		<Contact class="view" />
 
 		<router-view :message="msg" class="view"></router-view>
   </div>
@@ -63,6 +63,7 @@ body {
 	background: #eee;
 	color: #333;
 	margin: initial;
+	font-family: sans-serif;
 }
 li {
 	font-size: 24px;
@@ -74,7 +75,7 @@ li {
 
 .content {
 	margin-top: 40px;
-	width: 800px;
+	max-width: 800px;
 	text-align: center;
 }
 
