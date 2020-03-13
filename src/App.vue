@@ -18,6 +18,7 @@
 		<Info class="view" />
 		<Links class="view" />
 		<Contact class="view" />
+		<Works class="view" />
 
 		<router-view :message="msg" class="view"></router-view>
   </div>
@@ -29,6 +30,7 @@ import myheader from './components/header.vue'
 import Info from './components/Info.vue'
 import Links from './components/Links.vue'
 import Contact from './components/Contact.vue'
+import Works from './components/Works.vue'
 
 @Component({
   components: {
@@ -36,6 +38,7 @@ import Contact from './components/Contact.vue'
 		Info,
 		Links,
 		Contact,
+		Works,
   },
 })
 export default class App extends Vue {
@@ -71,7 +74,7 @@ li {
 
 .content {
 	margin-top: 40px;
-	width: 400px;
+	width: 800px;
 	text-align: center;
 }
 
