@@ -17,6 +17,7 @@
 
 		<Info class="view" />
 		<Links class="view" />
+		<Works class="view" />
 		<Contact class="view" />
 
 		<router-view :message="msg" class="view"></router-view>
@@ -29,6 +30,7 @@ import myheader from './components/header.vue'
 import Info from './components/Info.vue'
 import Links from './components/Links.vue'
 import Contact from './components/Contact.vue'
+import Works from './components/Works.vue'
 
 @Component({
   components: {
@@ -36,6 +38,7 @@ import Contact from './components/Contact.vue'
 		Info,
 		Links,
 		Contact,
+		Works,
   },
 })
 export default class App extends Vue {
@@ -60,6 +63,7 @@ body {
 	background: #eee;
 	color: #333;
 	margin: initial;
+	font-family: sans-serif;
 }
 li {
 	font-size: 24px;
@@ -71,12 +75,34 @@ li {
 
 .content {
 	margin-top: 40px;
-	width: 400px;
+	max-width: 800px;
 	text-align: center;
 }
 
 .title {
 	font-size: 36px;
+}
+
+.title::before {
+	content: "";
+	display: inline-block;
+	background: #333;
+	width: 50px;
+	height: 2px;
+	margin-right: 8px;
+	vertical-align: middle;
+	margin-top: -4px;
+}
+
+.title::after {
+	content: "";
+	display: inline-block;
+	background: #333;
+	width: 50px;
+	height: 2px;
+	margin-left: 8px;
+	vertical-align: middle;
+	margin-top: -4px;
 }
 
 a {

@@ -1,8 +1,8 @@
 <template>
 	<div id="contact" class="content">
-		<div class="title">- Contact -</div>
+		<div class="title">Contact</div>
 		<div class="description">
-			<div>shikachii095@gmail.com</div>
+			<div><a href="mailto:shikachii095@gmail.com">shikachii095@gmail.com</a></div>
 		</div>
 	</div>
 </template>
