@@ -18,6 +18,7 @@
 		<Info class="view" />
 		<Links class="view" />
 		<Works class="view" />
+		<IDs class="view" />
 		<Contact class="view" />
 
 		<router-view :message="msg" class="view"></router-view>
@@ -31,6 +32,7 @@ import Info from './components/Info.vue'
 import Links from './components/Links.vue'
 import Contact from './components/Contact.vue'
 import Works from './components/Works.vue'
+import IDs from './components/IDs.vue'
 
 @Component({
   components: {
@@ -39,6 +41,7 @@ import Works from './components/Works.vue'
 		Links,
 		Contact,
 		Works,
+		IDs,
   },
 })
 export default class App extends Vue {
