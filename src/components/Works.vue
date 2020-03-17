@@ -8,6 +8,10 @@
 					<div class="w-description">WebページのURLをQRコードとして表示するChrome拡張</div>
 					<img src="https://pbs.twimg.com/media/ESWUuRLUcAAC8Yf?format=png" class="w-screenshot" alt="screenshot"/>
 				</li>
+				<li>
+					<div class="w-title"><a href="https://shikachii.net">shikachii.net</a></div>
+					<div class="w-description">このサイトです</div>
+				</li>
 			</ul>
 		</div>
 	</div>
@@ -24,6 +28,10 @@ export default class Works extends Vue { }
 .description ul {
 	padding: initial;
 	list-style-type: none;
+}
+
+.description li {
+	margin-bottom: 20px;
 }
 
 .w-title {
