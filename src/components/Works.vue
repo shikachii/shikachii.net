@@ -47,5 +47,7 @@ export default class Works extends Vue { }
 .w-screenshot {
 	max-width: 400px;
 	max-height: 400px;
+	width: 100%;
+	height: 100%;
 }
 </style>
