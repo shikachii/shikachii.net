@@ -2,14 +2,19 @@
 	<div id="header">
 		<div class="view">
 			<div id="title" class="info">
+				<!--
 				<router-link to="/">shikachii.net</router-link>
+				-->
+				shikachii.net
 			</div>
+			<!--
 			<div class="nav info">
 				<ul>
 					<li><router-link to="/info">Info</router-link></li>
 					<li><router-link to="/links">Links</router-link></li>
 				</ul>
 			</div>
+			-->
 		</div>
 	</div>
 </template>
