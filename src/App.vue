@@ -21,7 +21,9 @@
 		<IDs class="view" />
 		<Contact class="view" />
 
+		<!--
 		<router-view :message="msg" class="view"></router-view>
+		-->
   </div>
 </template>
 
