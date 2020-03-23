@@ -15,9 +15,21 @@
 				</ul>
 			</div>
 			-->
+			<HamburgerMenu></HamburgerMenu>
 		</div>
 	</div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import HamburgerMenu from '@/components/HamburgerMenu.vue'
+@Component({
+	components: {
+		HamburgerMenu,
+	},
+})
+export default class Header extends Vue {}
+</script>
 
 <style scoped>
 #header {

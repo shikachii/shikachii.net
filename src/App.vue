@@ -15,15 +15,15 @@
 		<button @click="clear()">clear</button>
 		-->
 
+		<!--
 		<Info class="view" />
 		<Links class="view" />
 		<Works class="view" />
 		<IDs class="view" />
 		<Contact class="view" />
-
-		<!--
-		<router-view :message="msg" class="view"></router-view>
 		-->
+
+		<router-view class="view" />
   </div>
 </template>
 
