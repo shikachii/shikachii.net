@@ -74,7 +74,6 @@ export default class HamburgerMenu extends Vue {
 	background: #333;
 	transition: color 200ms;
 }
-	
 
 .hamburger div:nth-of-type(1) {
 	top: 12px;
@@ -98,13 +97,6 @@ export default class HamburgerMenu extends Vue {
 	transition: all 200ms;
 }
 
-
-/*
-.hamburger.active {
-	color: #333;
-}
-*/
-
 .links {
 	position: fixed;
 	right: 0px;
@@ -112,6 +104,7 @@ export default class HamburgerMenu extends Vue {
 	background: #eee;
 	width: 250px;
 	height: 100%;
+	box-shadow: -2px 0px 10px 6px rgba(100,100,100,0.4);
 }
 
 .shadow {
@@ -122,14 +115,6 @@ export default class HamburgerMenu extends Vue {
 	height: 100%;
 	background: rgba(0, 0, 0, 0.4);
 	z-index: -999;
-}
-
-.menu-enter-active, .menu-leave-active {
-	transition: opacity 400ms;
-}
-
-.menu-enter, .menu-leave-to {
-	opacity: 0;
 }
 
 .fade-enter-active, .fade-leave-active {
