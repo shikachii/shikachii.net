@@ -7,6 +7,7 @@
 			<transition name="slide">
 			<div class="links" v-if="isActive">
 				<ul>
+					<li class="m-title">Menu</li>
 					<li v-for="(link, index) in links" :key=index @click="inverse()">
 						<router-link :to=link.path>
 							{{ link.title }}
@@ -141,15 +142,24 @@ ul {
 
 li {
 	list-style-type: none;
-	margin-left: 30px;
-	margin-bottom: 8px;
+	margin-left: 20px;
+	margin-bottom: 12px;
+}
+
+.m-title {
+	border-bottom: 1px solid #333;
+	color: #333;
+	font-size: 30px;
 }
 
 a {
 	display: inline-block;
-	width: 100%;
+	margin-left: 10px;
+	width: 90%;
+	font-size: 26px;
 	color: #333;
 	text-decoration: none;
+	border-bottom: 1px solid rgba(100,100,100,0.4);
 	transition: color 200ms;
 }
 
