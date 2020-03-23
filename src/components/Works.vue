@@ -5,8 +5,8 @@
 			<ul>
 				<li>
 					<div class="w-title"><a href="https://github.com/shikachii/QR-generator">QR-generator</a></div>
-					<div class="w-description">WebページのURLをQRコードとして表示するChrome拡張</div>
 					<img src="https://pbs.twimg.com/media/ESWUuRLUcAAC8Yf?format=png" class="w-screenshot" alt="screenshot"/>
+					<div class="w-description">WebページのURLをQRコードとして表示するChrome拡張</div>
 				</li>
 				<li>
 					<div class="w-title"><a href="https://shikachii.net">shikachii.net</a></div>
@@ -49,5 +49,6 @@ export default class Works extends Vue { }
 	max-height: 400px;
 	width: 100%;
 	height: 100%;
+	margin-bottom: 5px;
 }
 </style>
