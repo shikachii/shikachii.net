@@ -15,7 +15,7 @@
 				</ul>
 			</div>
 			-->
-			<HamburgerMenu></HamburgerMenu>
+			<HamburgerMenu/>
 		</div>
 	</div>
 </template>
