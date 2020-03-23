@@ -2,17 +2,34 @@
 	<div id="header">
 		<div class="view">
 			<div id="title" class="info">
+				<!--
 				<router-link to="/">shikachii.net</router-link>
+				-->
+				shikachii.net
 			</div>
+			<!--
 			<div class="nav info">
 				<ul>
 					<li><router-link to="/info">Info</router-link></li>
 					<li><router-link to="/links">Links</router-link></li>
 				</ul>
 			</div>
+			-->
+			<HamburgerMenu/>
 		</div>
 	</div>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator'
+import HamburgerMenu from '@/components/HamburgerMenu.vue'
+@Component({
+	components: {
+		HamburgerMenu,
+	},
+})
+export default class Header extends Vue {}
+</script>
 
 <style scoped>
 #header {
