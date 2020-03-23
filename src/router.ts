@@ -12,7 +12,7 @@ import App from './App.vue'
 Vue.use(Router)
 
 const routes = [
-	{ path: '/', component: Content },
+	{ path: '/', component: Info },
 	{ path: '/content', component: Content },
 	{ path: '/info', component: Info },
 	{ path: '/links', component: Links },
