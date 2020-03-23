@@ -16,7 +16,15 @@
 			</div>
 			</transition>
 		</div>
-		<div class="hamburger" @click="inverse()">三</div>
+
+		<div v-if="isActive" class="hamburger active" @click="inverse()">
+			<div></div>
+			<div></div>
+		</div>
+		<div v-else class="hamburger" @click="inverse()">
+			<div></div>
+			<div></div>
+		</div>
 	</div>
 </template>
 
@@ -27,7 +35,7 @@ export default class HamburgerMenu extends Vue {
 	isActive: boolean = false
 
 	links: object[] = [
-		{ path: '/', title: 'Home' },
+		{ path: '/Info', title: 'Home' },
 		{ path: '/Links', title: 'Links' },
 		{ path: '/Works', title: 'Works' },
 		{ path: '/IDs', title: 'IDs' },
@@ -47,25 +55,62 @@ export default class HamburgerMenu extends Vue {
 }
 
 .hamburger {
-	color: #888;
 	position: relative;
 	right: 0px;
 	top: 0px;	
-	font-size: 24px;
-	line-height: 36px;
+	width: 24px;
+	height: 36px;
 }
 
-.hamburger.active {
-	color: #333;
+.hamburger div {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background: #eee;
+}
+
+.hamburger.active div {
+	background: #333;
 	transition: color 200ms;
 }
+	
+
+.hamburger div:nth-of-type(1) {
+	top: 12px;
+	transform: rotate(0deg);
+}
+
+.hamburger div:nth-of-type(2) {
+	bottom: 12px;
+	transform: rotate(0deg);
+}
+
+.hamburger.active div:nth-of-type(1) {
+	-webkit-transform: translateY(5px) rotate(-45deg);
+	transform: translateY(5px) rotate(-45deg);
+	transition: all 200ms;
+}
+
+.hamburger.active div:nth-of-type(2) {
+	-webkit-transform: translateY(-5px) rotate(45deg);
+	transform: translateY(-5px) rotate(45deg);
+	transition: all 200ms;
+}
+
+
+/*
+.hamburger.active {
+	color: #333;
+}
+*/
 
 .links {
 	position: fixed;
 	right: 0px;
 	top: 0;
 	background: #eee;
-	width: 370px;
+	width: 250px;
 	height: 100%;
 }
 
@@ -100,7 +145,7 @@ export default class HamburgerMenu extends Vue {
 }
 
 .slide-enter, .slide-leave-to {
-	right: -380px;
+	right: -250px;
 }
 
 ul {
@@ -116,6 +161,8 @@ li {
 }
 
 a {
+	display: inline-block;
+	width: 100%;
 	color: #333;
 	text-decoration: none;
 	transition: color 200ms;
