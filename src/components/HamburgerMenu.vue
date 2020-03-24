@@ -17,21 +17,18 @@
 			</div>
 			</transition>
 		</div>
-
-		<div v-if="isActive" class="hamburger active" @click="inverse()">
-			<div></div>
-			<div></div>
-		</div>
-		<div v-else class="hamburger" @click="inverse()">
-			<div></div>
-			<div></div>
-		</div>
+		<Hamburger :isActive="isActive" @click="inverse()"/>
 	</div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
-@Component
+import Hamburger from '@/components/Hamburger.vue'
+@Component({
+	components: {
+		Hamburger,
+	},
+})
 export default class HamburgerMenu extends Vue {
 	isActive: boolean = false
 
@@ -40,6 +37,7 @@ export default class HamburgerMenu extends Vue {
 		{ path: '/Links', title: 'Links' },
 		{ path: '/Works', title: 'Works' },
 		{ path: '/IDs', title: 'IDs' },
+		{ path: '/Contact', title: 'Contact' },
 	]
 
 	inverse() {
@@ -50,52 +48,9 @@ export default class HamburgerMenu extends Vue {
 
 <style scoped>
 #HamburgerMenu {
-	position: fixed;
+	position: absolute;
 	right: 5%;
 	top: 20px;	
-}
-
-.hamburger {
-	position: relative;
-	right: 0px;
-	top: 0px;	
-	width: 24px;
-	height: 36px;
-}
-
-.hamburger div {
-	position: absolute;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background: #eee;
-}
-
-.hamburger.active div {
-	background: #333;
-	transition: color 200ms;
-}
-
-.hamburger div:nth-of-type(1) {
-	top: 12px;
-	transform: rotate(0deg);
-}
-
-.hamburger div:nth-of-type(2) {
-	bottom: 12px;
-	transform: rotate(0deg);
-}
-
-.hamburger.active div:nth-of-type(1) {
-	-webkit-transform: translateY(5px) rotate(-45deg);
-	transform: translateY(5px) rotate(-45deg);
-	transition: all 200ms;
-}
-
-.hamburger.active div:nth-of-type(2) {
-	-webkit-transform: translateY(-5px) rotate(45deg);
-	transform: translateY(-5px) rotate(45deg);
-	transition: all 200ms;
 }
 
 .links {
@@ -115,7 +70,6 @@ export default class HamburgerMenu extends Vue {
 	width: 100%;
 	height: 100%;
 	background: rgba(0, 0, 0, 0.4);
-	z-index: -999;
 }
 
 .fade-enter-active, .fade-leave-active {
