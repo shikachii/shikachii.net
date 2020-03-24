@@ -9,18 +9,18 @@
 
 			// 各種URL情報
 			const port = loc.port ? ':' + loc.port : ''
-			const protcol = loc.protcol
+			const protocol = loc.protocol
 			const hostname = loc.hostname
 			const pathname = loc.pathname
 
 			// 遷移先URL
 			// 例) https://shikachii.net/?p=Links
-			let url = protcol + "//" + hostname + "/?p="
+			let url = protocol + "//" + hostname + "/?p="
 			url += pathname.split('/').slice(0, 2).join('/')
 			console.log(url)
 
 			// 遷移
-			// loc.replace(url)
+			loc.replace(url)
 		</script>
 	</head>
 	<body></body>
