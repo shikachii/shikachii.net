@@ -17,7 +17,7 @@
 						q[p[0]] = p[1]
 					})
 					if (q.p !== undefined) {
-						window.history.replaceState(null, null, l.pathname.slice(0, -1) + (q.p || ''))
+						window.history.replaceState(null, null, loc.pathname.slice(0, -1) + (q.p || ''))
 					}
 				}
 			})(window.location)
