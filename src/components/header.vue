@@ -2,10 +2,8 @@
 	<div id="header">
 		<div class="view">
 			<div id="title" class="info">
-				<!--
 				<router-link to="/">shikachii.net</router-link>
-				-->
-				shikachii.net
+				<!-- shikachii.net -->
 			</div>
 			<!--
 			<div class="nav info">
