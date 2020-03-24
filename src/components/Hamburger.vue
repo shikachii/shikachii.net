@@ -16,7 +16,7 @@ import { Component, Emit, Prop, Vue } from 'vue-property-decorator'
 @Component
 export default class Hamburger extends Vue {
 	@Prop()
-	public isActive: boolean
+	public isActive: boolean = false
 
 	@Emit()
 	public click() {}

@@ -25,7 +25,7 @@ import { Component, Emit, Prop, Vue } from 'vue-property-decorator'
 @Component
 export default class Menu extends Vue {
 	@Prop()
-	public isActive: boolean
+	public isActive: boolean = false
 
 	links: object[] = [
 		{ path: '/Info', title: 'Home' },
@@ -35,7 +35,7 @@ export default class Menu extends Vue {
 		{ path: '/Contact', title: 'Contact' },
 	]
 
-	@Emit
+	@Emit()
 	public click(){}
 }
 </script>
