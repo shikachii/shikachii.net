@@ -7,6 +7,21 @@
     <meta name="theme-color" content="#3d3d3d">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+		<script>
+			(function(loc){
+				if(loc.search){
+					let q = {}
+					// slice(1)で/を削除
+					loc.search.slice(1).split('&').forEach(function(param){
+						const p = param.split('=')
+						q[p[0]] = p[1]
+					})
+					if (q.p !== undefined) {
+						window.history.replaceState(null, null, l.pathname.slice(0, -1) + (q.p || ''))
+					}
+				}
+			})(window.location)
+		</script>
   </head>
   <body>
     <noscript>
