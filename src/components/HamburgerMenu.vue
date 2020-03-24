@@ -103,7 +103,7 @@ export default class HamburgerMenu extends Vue {
 	right: 0px;
 	top: 0;
 	background: #eee;
-	width: 250px;
+	width: 280px;
 	height: 100%;
 	box-shadow: -2px 0px 10px 6px rgba(100,100,100,0.4);
 }
@@ -131,32 +131,35 @@ export default class HamburgerMenu extends Vue {
 }
 
 .slide-enter, .slide-leave-to {
-	right: -250px;
+	right: -280px;
 }
 
 ul {
 	margin: initial;
 	padding: initial;
-	margin-top: 80px;
+	margin-left: 25px;
+	width: 73%;
 }
 
 li {
 	list-style-type: none;
-	margin-left: 20px;
-	margin-bottom: 12px;
+	margin-left: 0px;
+	margin-bottom: 20px;
 }
 
 .m-title {
-	border-bottom: 1px solid #333;
+	border-bottom: 1px solid rgba(100,100,100,0.4);
 	color: #333;
-	font-size: 30px;
+	font-size: 24px;
+	line-height: 36px;
+	padding: 20px 0;
 }
 
 a {
 	display: inline-block;
-	margin-left: 10px;
-	width: 90%;
-	font-size: 26px;
+	margin-left: 0px;
+	width: 100%;
+	font-size: 22px;
 	color: #333;
 	text-decoration: none;
 	border-bottom: 1px solid rgba(100,100,100,0.4);
