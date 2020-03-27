@@ -29,12 +29,12 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-import myheader from './components/header.vue'
-import Info from './components/Info.vue'
-import Links from './components/Links.vue'
-import Contact from './components/Contact.vue'
-import Works from './components/Works.vue'
-import IDs from './components/IDs.vue'
+import myheader from '@/components/header.vue'
+import Info from '@/components/Info.vue'
+import Links from '@/components/Links.vue'
+import Contact from '@/components/Contact.vue'
+import Works from '@/components/Works.vue'
+import IDs from '@/components/IDs.vue'
 
 @Component({
   components: {

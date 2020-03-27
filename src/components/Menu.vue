@@ -86,7 +86,6 @@ ul {
 li {
 	list-style-type: none;
 	margin-left: 0px;
-	margin-bottom: 20px;
 }
 
 .m-title {
@@ -106,6 +105,7 @@ a {
 	text-decoration: none;
 	border-bottom: 1px solid rgba(100,100,100,0.4);
 	transition: color 200ms;
+	padding-top: 20px;
 }
 
 a:hover {
