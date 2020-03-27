@@ -31,14 +31,14 @@ export default class Works extends Vue {
 		{ 
 			title: 'QR-generator',
 			url: 'https://github.com/shikachii/QR-generator',
-			imgUrl: 'https://pbs.twimg.com/media/ESWUuRLUcAAC8Yf?format=png',
+			imgUrl: 'QR-generator.png',
 			description: 'WebページのURLをQRコードとして表示するChrome拡張'
 		},
 		{
 			title: 'shikachii.net',
 			url: 'https://shikachii.net',
-			imgUrl: '',
-			description: 'このサイトです'
+			imgUrl: 'shikachii_net.png',
+			description: 'このWebサイト'
 		},
 	]	
 }
@@ -52,23 +52,5 @@ export default class Works extends Vue {
 
 .description li {
 	margin-bottom: 20px;
-}
-
-.w-title {
-	font-size: 24px;
-	margin-bottom: 5px;
-}
-
-.w-description {
-	font-size: 18px;
-	margin-bottom: 5px;
-}
-
-.w-screenshot {
-	max-width: 400px;
-	max-height: 400px;
-	width: 100%;
-	height: 100%;
-	margin-bottom: 5px;
 }
 </style>

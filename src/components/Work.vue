@@ -3,7 +3,8 @@
 		<div class="w-title"><a :href="url">{{ title }}</a></div>
 		<div class="w-description">{{ description }}</div>
 		<img v-if="imgUrl!==''"
-			:src="imgUrl" class="w-screenshot" alt="screenshot"/>
+			:src="loadImg()" class="w-screenshot" alt="screenshot"/>
+		<img v-else :src="imgUrl" class="w-screenshot" alt="screenshot"/>
 	</div>
 </template>
 
@@ -23,25 +24,53 @@ export default class Work extends Vue {
 	
 	@Prop()
 	description?: string
+
+	public loadImg() {
+		return require(`@/assets/${this.imgUrl}`)
+	}
 }
 </script>
 
 <style scoped>
 .w-title {
 	font-size: 24px;
-	margin-bottom: 5px;
+	margin-bottom: 8px;
+}
+
+.w-title::before {
+	content: '';
+	display: inline-block;
+	background: #333;
+	width: 10px;
+	height: 10px;
+	margin-right: 8px;
+	margin-top: -4px;
+	vertical-align: middle;
+}
+
+.w-title::after {
+	content: '';
+	display: inline-block;
+	background: #333;
+	width: 10px;
+	height: 10px;
+	margin-left: 8px;
+	margin-top: -4px;
+	vertical-align: middle;
 }
 
 .w-description {
 	font-size: 18px;
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 }
 
 .w-screenshot {
 	max-width: 400px;
 	max-height: 400px;
+	/* 画面が小さくなったときに親ノードのサイズ100%に合わせる */
 	width: 100%;
 	height: 100%;
-	margin-bottom: 5px;
+	margin-bottom: 8px;
+	border: 1px solid #333;
 }
 </style>
