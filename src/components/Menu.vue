@@ -31,7 +31,7 @@ export default class Menu extends Vue {
 		{ path: '/Info', title: 'Home' },
 		{ path: '/Links', title: 'Links' },
 		{ path: '/Works', title: 'Works' },
-		{ path: '/IDs', title: 'IDs' },
+		// { path: '/IDs', title: 'IDs' },
 		{ path: '/Contact', title: 'Contact' },
 	]
 
