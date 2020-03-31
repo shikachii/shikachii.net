@@ -80,6 +80,7 @@ li {
 
 .content {
 	margin-top: 40px;
+	margin-bottom: 40px;
 	max-width: 800px;
 	text-align: center;
 }
@@ -112,13 +113,15 @@ li {
 
 a {
 	color: #333;
+	border-bottom: 1px solid #888;
 	text-decoration: none;
-	transition: color 200ms;
+	transition: all 200ms;
 }
 
 a:hover {
 	color: #888;
-	transition: color 200ms;
+	border-bottom: 1px solid #ccc;
+	transition: all 200ms;
 }
 
 .description {

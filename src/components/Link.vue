@@ -28,7 +28,8 @@ export default class Link extends Vue {
 
 <style scoped>
 .l-title {
-	font-size: 20px;
+	font-size: 24px;
+	margin-bottom: 2px;
 }
 
 .l-title::before {
