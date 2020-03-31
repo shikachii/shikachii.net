@@ -4,7 +4,12 @@
 		<div class="description">
 			<ul>
 				<li v-for="(link, index) in links" :key=index>
-					<Link :path="link.path" :title="link.title" />
+					<Link
+						:path="link.path"
+						:title="link.title"
+						:id="link.id"
+						:color="link.color"
+					/>
 				</li>
 			</ul>
 			<!--
@@ -35,31 +40,39 @@ export default class Links extends Vue {
 	links: object[] = [
 		{
 			title: 'Twitter',
-			path: 'https://twitter.com/shikachii'
+			path: 'https://twitter.com/shikachii',
+			id: '@shikachii',
 		},
 		{
 			title: 'GitHub',
-			path: 'https://github.com/shikachii'
+			path: 'https://github.com/shikachii',
+			id: '@shikachii',
 		},
 		{
 			title: 'AtCoder',
-			path: 'https://atcoder.jp/users/shikachii'
-		},
-		{
-			title: 'Keybase',
-			path: 'https://keybase.io/shikachii'
+			path: 'https://atcoder.jp/users/shikachii',
+			id: 'shikachii',
+			color: 'green',
 		},
 		{
 			title: 'Blog',
-			path: 'https://shikachii.hatenablog.com'
+			path: 'https://shikachii.hatenablog.com',
+			id: '記憶',
+		},
+		{
+			title: 'Keybase',
+			path: 'https://keybase.io/shikachii',
+			id: 'shikachii',
 		},
 		{
 			title: 'Instagram',
-			path: 'https://instagram.com/shikachii095'
+			path: 'https://instagram.com/shikachii095',
+			id: 'shikachii095',
 		},
 		{
 			title: 'IIDX☆12ハード参考表',
-			path: 'https://sp12.iidx.app/sheets/0719-9172/hard'
+			path: 'https://sp12.iidx.app/sheets/0719-9172/hard',
+			id: '0719-9172',
 		},
 	]
 }
@@ -72,6 +85,6 @@ ul {
 }
 
 .description li {
-	margin-bottom: 8px;
+	margin-bottom: 20px;
 }
 </style>

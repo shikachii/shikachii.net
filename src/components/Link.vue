@@ -1,6 +1,9 @@
 <template>
 	<div class="link">
-		<a :href="path">{{ title }}</a>
+		<div class="l-title">{{ title }}</div>
+		<a :href="path">
+			<span :class="color">{{ id }}</span>
+		</a>
 	</div>
 </template>
 
@@ -14,10 +17,44 @@ export default class Link extends Vue {
 
 	@Prop()
 	title?: string
+
+	@Prop()
+	id?: string
+
+	@Prop()
+	color?: string
 }
 </script>
 
 <style scoped>
+.l-title {
+	font-size: 20px;
+}
+
+.l-title::before {
+	content: '';
+	display: inline-block;
+	background: #333;
+	width: 8px;
+	height: 8px;
+	margin-right: 8px;
+	margin-top: -4px;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+
+.l-title::after {
+	content: '';
+	display: inline-block;
+	background: #333;
+	width: 8px;
+	height: 8px;
+	margin-left: 8px;
+	margin-top: -4px;
+	vertical-align: middle;
+	border-radius: 50%;
+}
+
 a {
 	font-size: 18px;
 }
@@ -32,5 +69,4 @@ a:hover > .green {
 	color: #008000;
 	transition: color 200ms;
 }
-
 </style>
