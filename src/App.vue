@@ -113,14 +113,12 @@ li {
 
 a {
 	color: #333;
-	border-bottom: 1px solid #888;
 	text-decoration: none;
 	transition: all 200ms;
 }
 
 a:hover {
 	color: #888;
-	border-bottom: 1px solid #ccc;
 	transition: all 200ms;
 }
 
