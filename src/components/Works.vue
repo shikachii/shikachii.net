@@ -40,7 +40,7 @@ export default class Works extends Vue {
 			title: 'shikachii.net',
 			url: 'https://github.com/shikachii/shikachii.net',
 			release: 'https://shikachii.net',
-			imgUrl: 'shikachii_net.png',
+			imgUrl: '',
 			description: 'このWebサイト'
 		},
 	]	

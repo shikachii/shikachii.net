@@ -6,7 +6,6 @@
 		</div>
 		<img v-if="imgUrl!==''"
 			:src="loadImg()" class="w-screenshot" alt="screenshot"/>
-		<img v-else :src="imgUrl" class="w-screenshot" alt="screenshot"/>
 		<div class="w-link">
 			<a :href="url">ソースコード</a>/<a :href="release">リリース</a>
 		</div>
