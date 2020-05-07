@@ -1,10 +1,14 @@
 <template>
 	<div class="work">
-		<div class="w-title"><a :href="url">{{ title }}</a></div>
-		<div class="w-description">{{ description }}</div>
+		<div class="w-title">{{ title }}</div>
+		<div class="w-description">
+			{{ description }}
+		</div>
 		<img v-if="imgUrl!==''"
 			:src="loadImg()" class="w-screenshot" alt="screenshot"/>
-		<img v-else :src="imgUrl" class="w-screenshot" alt="screenshot"/>
+		<div class="w-link">
+			<a :href="url">ソースコード</a>/<a :href="release">リリース</a>
+		</div>
 	</div>
 </template>
 
@@ -18,6 +22,9 @@ export default class Work extends Vue {
 
 	@Prop()
 	url?: string
+
+	@Prop()
+	release?: string
 	
 	@Prop()
 	imgUrl?: string
@@ -46,6 +53,7 @@ export default class Work extends Vue {
 	margin-right: 8px;
 	margin-top: -4px;
 	vertical-align: middle;
+	border-radius: 50%;
 }
 
 .w-title::after {
@@ -57,11 +65,17 @@ export default class Work extends Vue {
 	margin-left: 8px;
 	margin-top: -4px;
 	vertical-align: middle;
+	border-radius: 50%;
 }
 
 .w-description {
 	font-size: 18px;
 	margin-bottom: 8px;
+}
+
+.w-link {
+	font-size: 15px;
+	margin-bottom: 4px;
 }
 
 .w-screenshot {
@@ -70,7 +84,7 @@ export default class Work extends Vue {
 	/* 画面が小さくなったときに親ノードのサイズ100%に合わせる */
 	width: 100%;
 	height: 100%;
-	margin-bottom: 8px;
+	margin-bottom: 4px;
 	border: 1px solid #333;
 }
 </style>

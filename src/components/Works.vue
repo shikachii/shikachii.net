@@ -7,6 +7,7 @@
 					<Work
 						:title="work.title"
 						:url="work.url"
+						:release="work.release"
 						:imgUrl="work.imgUrl"
 						:description="work.description"
 					/>
@@ -31,13 +32,15 @@ export default class Works extends Vue {
 		{ 
 			title: 'QR-generator',
 			url: 'https://github.com/shikachii/QR-generator',
+			release: 'https://github.com/shikachii/QR-generator/releases/tag/v0.1.0',
 			imgUrl: 'QR-generator.png',
 			description: 'WebページのURLをQRコードとして表示するChrome拡張'
 		},
 		{
 			title: 'shikachii.net',
-			url: 'https://shikachii.net',
-			imgUrl: 'shikachii_net.png',
+			url: 'https://github.com/shikachii/shikachii.net',
+			release: 'https://shikachii.net',
+			imgUrl: '',
 			description: 'このWebサイト'
 		},
 	]	
@@ -51,6 +54,6 @@ export default class Works extends Vue {
 }
 
 .description li {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 </style>
