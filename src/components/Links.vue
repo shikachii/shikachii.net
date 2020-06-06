@@ -52,12 +52,12 @@ export default class Links extends Vue {
 			title: 'AtCoder',
 			path: 'https://atcoder.jp/users/shikachii',
 			id: 'shikachii',
-			color: 'green',
+			color: 'brawn',
 		},
 		{
 			title: 'Blog',
 			path: 'https://shikachii.hatenablog.com',
-			id: '記憶',
+			id: '駅から徒歩27分',
 		},
 		{
 			title: 'Keybase',

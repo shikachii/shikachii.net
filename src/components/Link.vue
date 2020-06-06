@@ -70,4 +70,14 @@ a:hover > .green {
 	color: #008000;
 	transition: color 200ms;
 }
+
+a:hover > .brawn {
+	color: #C09050;
+	transition: color 200ms;
+}
+
+.brawn {
+	color: #804000;
+	transition: color 200ms;
+}
 </style>
