@@ -1,29 +1,22 @@
-# shikachii.github.io
+# shikachii.net
+[@shikachii](https://twitter.com/shikachii)
+についての情報を知ることができます。
 
-## Project setup
+# 動かし方
+## npmを用いる場合
 ```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
+# Recommend Node.js version 10.16.0 or higher.
+$ npm install
+$ npm run serve
 ```
 
-### Run your tests
+## docker composeを用いる場合
 ```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
+$ docker-compose up --build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## 閲覧
+`localhost:8080`にアクセスすることで確認可能。
+
+# ライセンス情報
+このソフトウェアはMITライセンスの元で提供されています。
