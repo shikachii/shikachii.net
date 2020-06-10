@@ -1,7 +1,7 @@
 <template>
 	<div class="workCard">
 		<a :href="release">
-		<img v-if="imgUrl!==''" :src="loadImg()" class="workCardThumbnail" alt="thumbnail" />
+		<img :src="loadImg()" class="workCardThumbnail" alt="thumbnail" />
 		<div class="workCardFrame">
 			<div class="workCardFrameTitle">{{ title }}</div>
 			<div class="workCardFrameSource">
@@ -15,7 +15,7 @@
 
 <style scoped>
 .workCard {
-	max-width: 400px;
+	max-width: 500px;
 	width: 100%;
 	opacity: 1;
 	transition: opacity 200ms;
@@ -116,7 +116,11 @@ export default class WorkCard extends Vue {
 	description?: string
 
 	public loadImg() {
-		return require(`@/assets/${this.imgUrl}`)
+		if(this.imgUrl !== '') {
+			return require(`@/assets/${this.imgUrl}`)
+		} else {
+			return require(`@/assets/noimage.png`)
+		}
 	}
 }
 </script>
