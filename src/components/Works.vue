@@ -4,6 +4,18 @@
 		<div class="description">
 			<ul>
 				<li v-for="(work, index) in works" :key=index>
+					<WorkCard
+						:title="work.title"
+						:url="work.url"
+						:release="work.release"
+						:imgUrl="work.imgUrl"
+						:description="work.description"
+					/>
+				</li>
+			</ul>
+			<!--
+			<ul>
+				<li v-for="(work, index) in works" :key=index>
 					<Work
 						:title="work.title"
 						:url="work.url"
@@ -13,6 +25,7 @@
 					/>
 				</li>
 			</ul>
+			-->
 		</div>
 	</div>
 </template>
@@ -20,10 +33,12 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
 import Work from '@/components/Work.vue'
+import WorkCard from '@/components/WorkCard.vue'
 
 @Component({
 	components: {
 		Work,
+		WorkCard,
 	},
 })
 export default class Works extends Vue {
