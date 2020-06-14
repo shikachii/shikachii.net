@@ -104,9 +104,9 @@ export default class LinkCard extends Vue {
 	@Prop({ default: 'none' })
 	color?: string
 	@Prop({ default: '' })
-	fav?: string
+	fav!: string | undefined
 
 	// prefixと分離
-	icon: object[] = this.fav.split(' ')
+	icon: string[] = (this.fav !== undefined) ? this.fav.split(' ') : []
 }
 </script>
