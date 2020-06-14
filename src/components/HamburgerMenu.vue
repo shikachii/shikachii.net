@@ -33,6 +33,7 @@ export default class HamburgerMenu extends Vue {
 	position: absolute;
 	right: 5%;
 	top: 20px;	
+	z-index: 9;
 }
 
 #HamburgerMenu.active {
