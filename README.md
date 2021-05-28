@@ -1,4 +1,8 @@
 # shikachii.net
+
+![example workflow](https://github.com/shikachii/shikachii.net/actions/workflows/deploy.yml/badge.svg)
+![example workflow](https://github.com/shikachii/shikachii.net/actions/workflows/test.yml/badge.svg)
+
 [@shikachii](https://twitter.com/shikachii)
 についての情報を知ることができます。
 
