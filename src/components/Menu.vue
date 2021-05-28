@@ -26,11 +26,12 @@ export default class Menu extends Vue {
 	public isActive: boolean = false
 
 	links: object[] = [
-		{ path: '/Info', title: 'Home' },
-		{ path: '/Links', title: 'Links' },
-		{ path: '/Works', title: 'Works' },
+		{ path: '/info', title: 'Home' },
+		{ path: '/links', title: 'Links' },
+		{ path: '/works', title: 'Works' },
 		// { path: '/IDs', title: 'IDs' },
-		{ path: '/Contact', title: 'Contact' },
+    { path: '/careers', title: 'Careers' },
+		{ path: '/contact', title: 'Contact' },
 	]
 
 	@Emit()

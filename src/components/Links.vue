@@ -46,7 +46,7 @@ export default class Links extends Vue {
 			title: 'AtCoder',
 			path: 'https://atcoder.jp/users/shikachii',
 			id: 'shikachii',
-			color: 'brawn',
+			color: 'green',
 			fav: 'fas laptop-code',
 		},
 		{
