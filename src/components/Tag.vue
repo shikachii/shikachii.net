@@ -1,7 +1,7 @@
 <template>
   <div :class="$style.root">
     <div :class="$style.tag">
-      #{{ name }}
+      <slot></slot>
     </div>
   </div>
 </template>
@@ -10,14 +10,12 @@
 import Vue, { PropType } from 'vue';
 
 export default Vue.extend({
-  props: {
-    name: { type: String as PropType<string> },
-  },
 });
 </script>
 
 <style module>
 .root {
+  display: inline-block;
 }
 
 .tag {
@@ -26,7 +24,11 @@ export default Vue.extend({
 
   font-weight: normal;
 
-  color: #eee;
+  color: #fff;
   background: #888;
+}
+
+.tag::before {
+  content: '#';
 }
 </style>

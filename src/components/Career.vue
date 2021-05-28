@@ -5,9 +5,7 @@
       <div :class="$style.date">{{ startStr }} 〜 {{ endStr }} </div>
     </div>
     <template v-for="(tag, i) in career.tags">
-      <div :class="$style.tag" :key="i">
-        <Tag :name="tag" />
-      </div>
+      <Tag :class="$style.tag" :key="i">{{ tag }}</Tag>
     </template>
     <div :class="$style.description">{{ career.description }}</div>
   </div>
@@ -94,7 +92,6 @@ export default Vue.extend({
 }
 
 .tag {
-  display: inline-block;
   margin: 5px 5px 5px 0px;
 }
 
