@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>404 page not found</title>
+		<meta charset="utf-8" />
+		<script>
+			// アクセスしようとしたURL
+			let loc = window.location
+
+			// 各種URL情報
+			const port = loc.port ? ':' + loc.port : ''
+			const protocol = loc.protocol
+			const hostname = loc.hostname
+			const pathname = loc.pathname
+
+			// 遷移先URL
+			// 例) https://shikachii.net/?p=Links
+			let url = protocol + "//" + hostname + "/?p="
+			url += pathname.split('/').slice(0, 2).join('/')
+			// console.log(url)
+
+			// 遷移
+			loc.replace(url)
+		</script>
+	</head>
+	<body></body>
+</html>
