@@ -10,10 +10,20 @@ const config = {
     },
     open: true,
   },
+  entry: {
+    app: './src/main.jsx',
+  },
+  output: {
+    filename: '[name].js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  resolve: {
+    extensions: ['.js', ".json", ".jsx"],
+  },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.jsx$/,
         loader: 'babel-loader',
       },
     ]
