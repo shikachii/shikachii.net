@@ -8,7 +8,6 @@ const config = {
     static: {
       directory: path.join(__dirname, 'dist'),
     },
-    open: true,
   },
   entry: {
     app: './src/main.jsx',
@@ -26,6 +25,15 @@ const config = {
         test: /\.jsx$/,
         loader: 'babel-loader',
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', {
+          loader: 'css-loader',
+          options: {
+            sourceMap: true,
+          }
+        }],
+      }
     ]
   }
 };
