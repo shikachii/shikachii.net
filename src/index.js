@@ -1,3 +1,3 @@
 import { Hello } from "./hello";
 
-new Hello("shikachii").greet();
+new Hello("shikachii.net!").greet();
