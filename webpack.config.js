@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 /** @type {import('webpack').Configuration} */
 const config = {
@@ -46,7 +47,15 @@ const config = {
         type: 'asset/resource',
       }
     ]
-  }
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'shikachii.net',
+      template: './src/index.html',
+      inject: 'body',
+      scriptLoading: 'defer',
+    }),
+  ],
 };
 
 module.exports = config;
