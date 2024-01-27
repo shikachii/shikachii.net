@@ -11,7 +11,7 @@ const config = {
     },
   },
   entry: {
-    app: './src/main.jsx',
+    app: './src/main.tsx',
   },
   output: {
     filename: '[name].js',
@@ -20,13 +20,14 @@ const config = {
     clean: true,
   },
   resolve: {
-    extensions: ['.js', ".json", ".jsx"],
+    extensions: ['.js', ".jsx", ".ts", ".tsx"],
   },
   module: {
     rules: [
       {
-        test: /\.jsx$/,
-        loader: 'babel-loader',
+        test: /\.tsx$/,
+        // loader: 'babel-loader',
+        loader: 'ts-loader',
       },
       {
         test: /\.s?css$/,
@@ -43,8 +44,12 @@ const config = {
         }],
       },
       {
-        test: /\.(png|jpe?g|gif|svg|ico)$/i,
+        test: /\.(png|jpe?g|gif|ico)$/i,
         type: 'asset/resource',
+      },
+      {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
       }
     ]
   },

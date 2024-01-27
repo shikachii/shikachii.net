@@ -7,7 +7,8 @@ export const App = () => {
 
   return (
     <div className="container">
-      <img src={ReactLogo} alt="React Logo" />
+      {/* <img src={ReactLogo} alt="React Logo" /> */}
+      <ReactLogo />
       <h1>Hello.</h1>
     </div>
   )
