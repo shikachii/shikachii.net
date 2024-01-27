@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './styles.scss';
 
 export const App = () => {
   console.log("Hello from App.jsx")

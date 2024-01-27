@@ -26,9 +26,14 @@ const config = {
         loader: 'babel-loader',
       },
       {
-        test: /\.css$/,
+        test: /\.s?css$/,
         use: ['style-loader', {
           loader: 'css-loader',
+          options: {
+            sourceMap: true,
+          }
+        }, {
+          loader: 'sass-loader',
           options: {
             sourceMap: true,
           }
