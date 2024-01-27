@@ -15,6 +15,8 @@ const config = {
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'asset/[hash][ext]',
+    clean: true,
   },
   resolve: {
     extensions: ['.js', ".json", ".jsx"],
@@ -38,6 +40,10 @@ const config = {
             sourceMap: true,
           }
         }],
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|ico)$/i,
+        type: 'asset/resource',
       }
     ]
   }
